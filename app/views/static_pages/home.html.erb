@@ -5,10 +5,13 @@
         <title><%= yield(:title) %> | SNS App</title>
     </head>
     <body>
-        <h1>SNS App</h1>
-        <p>
-            This is the homepage for SNS application.
-        </p>
+        <div class="center jumbotron">
+            <h1>SNS App</h1>
+            <h2>
+                This is the homepage for SNS application.
+            </h2>
+            <%= link_to "Sign up", '#', class: "btn btn-large btn-primary"%>
+        </div>
     </body>
 </html>
 
