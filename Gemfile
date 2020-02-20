@@ -8,9 +8,15 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # bcrypt
 gem 'bcrypt', '3.1.12'
 # bootstarp
-gem 'bootstrap-sass','3.3.7'
+gem 'bootstrap-sass', '3.3.7'
 # jquery-rails
 gem 'jquery-rails'
+# faker
+gem 'faker', '1.7.3'
+# will_paginate
+gem 'will_paginate', '3.1.7'
+# bootstrap-will_paginate
+gem 'bootstrap-will_paginate'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
