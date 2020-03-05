@@ -12,4 +12,15 @@
         </strong>
         followers
     </a>
+    
+    <a href="<%= iines_user_path(@user) %>">
+        <strong <%if current_user?(@user)%>
+                    id = "iines"
+                <%end%>
+                class="stat">
+            <%= @user.likes.count %>
+        </strong>
+        iines
+    </a>
 </div>
+

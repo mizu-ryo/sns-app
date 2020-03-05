@@ -17,6 +17,8 @@ gem 'faker', '1.7.3'
 gem 'will_paginate', '3.1.7'
 # bootstrap-will_paginate
 gem 'bootstrap-will_paginate'
+#counter culture
+gem 'counter_culture','~> 1.8'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
