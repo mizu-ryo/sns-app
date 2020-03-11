@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts.paginate(page: params[:page])
+    @posts = @user.posts.paginate(page: params[:page], per_page: 20)
   end
 
   def create
@@ -53,21 +53,21 @@ class UsersController < ApplicationController
   def following
     @title  = "Following"
     @user   = User.find(params[:id])
-    @users  = @user.following.paginate(page: params[:page])
+    @users  = @user.following.paginate(page: params[:page], per_page: 20)
     render 'show_follow'
   end
 
   def followers
     @title  = "Followers"
     @user   = User.find(params[:id])
-    @users  = @user.followers.paginate(page: params[:page])
+    @users  = @user.followers.paginate(page: params[:page], per_page: 20)
     render 'show_follow'
   end
 
   def iines
-    @title  = "Iines"
+    @title  = "Favorites"
     @user   = User.find(params[:id])
-    @iines  = @user.iine_posts.paginate(page: params[:page], per_page: 5)
+    @iines  = @user.iine_posts.paginate(page: params[:page], per_page: 20)
     render 'show_iine'
   end
   

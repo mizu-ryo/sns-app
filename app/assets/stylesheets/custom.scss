@@ -278,6 +278,22 @@ input {
         float: left;
         margin-right: 10px;
         margin-top: 5px;
+        
+    }
+    .comment_text_field {
+        padding-top: 15px;
+        padding-bottom: 0;
+        width: 95%;
+    }
+    table{
+        width: 80%;
+        margin-left: 60px;
+        border-collapse: collapse;
+        
+    }
+    td{
+        border: solid 0;
+        vertical-align: middle;
     }
 }
 
@@ -293,4 +309,33 @@ span.picture {
     input {
         border: 0;
     }
+}
+
+/* comment */
+
+.comments {
+    list-style: none;
+    padding: 0 0 0 60px;
+    li {
+       padding: 10px 0;
+       border-top: 1px solid #e8e8e8; 
+    }
+    .user {
+        margin-top: 5em;
+        padding-top: 0;
+    }
+    .content {
+        display: block;
+        margin-left: 0;
+        img {
+            display: block;
+            padding: 5px 0;
+        }
+    }
+    .timestamp {
+        color: $gray-light;
+        display: block;
+        margin-left: 0;
+    }
+    
 }

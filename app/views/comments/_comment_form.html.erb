@@ -1,0 +1,18 @@
+<% if !current_user?(post.user) %>
+    <%= form_for(post.comments.build) do |f| %>
+        <div><%= hidden_field_tag :post_id, post.id %></div>
+        <%#= render 'shared/error_messages', object: f.object %>
+        <table>
+            <tr>
+                <td>
+                    <div class="comment_text_field">
+                        <%= f.text_field :content, placeholder: "Compose new comment..." %>
+                    </div>
+                </td>
+                <td>
+                    <%= f.submit "Comment", class: "btn btn-success btn-sm btn-block" %>
+                </td>
+            </tr>
+        </table>
+    <% end %>
+<% end %>

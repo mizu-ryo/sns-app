@@ -6,6 +6,7 @@ class Post < ApplicationRecord
 
   has_many :likes, dependent: :destroy
   has_many :like_users, through: :likes, source: :user
+  has_many :comments, dependent: :destroy
 
   # ポストをいいねする
   def iine(user)
@@ -21,6 +22,5 @@ class Post < ApplicationRecord
   def iine?(user)
     like_users.include?(user)
   end
-
 
 end

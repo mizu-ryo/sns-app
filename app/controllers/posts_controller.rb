@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :logged_in_user, only: [:create, :destory]
+    before_action :logged_in_user, only: [:create, :destory, :show]
     before_action :correct_user,   only: :destroy
 
 
@@ -11,6 +11,7 @@ class PostsController < ApplicationController
         else
             @feed_items = []
             render 'static_pages/home'
+            #redirect_to root_url
         end
     end
 
@@ -19,6 +20,13 @@ class PostsController < ApplicationController
         flash[:success] = "Post deleted"
         redirect_to request.referrer || root_url
     end
+
+    def show
+        @post = Post.find(params[:id])
+        @comments = @post.comments
+        #@comment = @post.comments.build(user_id: current_user.id) if current_user
+    end
+
 
     private
 
