@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # bcrypt
 gem 'bcrypt', '3.1.12'
 # bootstarp
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '3.4.1'
 # jquery-rails
 gem 'jquery-rails'
 # faker
